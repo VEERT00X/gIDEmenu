@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "author": "VEERT00X",
+    "name": "GDB", 
+    "description": "Github Dev Button. A simple extension that adds a button to the toolbar that opens the Github Dev page in a new tab.",
+    
+
+    "options_ui": {
+        "page": "./html/options.html",
+        "open_in_tab": true
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs"
+    ],
+
+    "js": [
+        "./main.js"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://github.com/*"],
+            "js": ["./js/content.js"],
+            "css": ["./css/content.css"]
+        }
+    ]
+}
