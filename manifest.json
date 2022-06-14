@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "version": "2.0",
+    "author": "VEERT00X",
+    "name": "Github Dev Plus", 
+    "description": "Github Dev Button. A simple extension that adds a button to the toolbar that opens the Github Dev page in a new tab.",
+    "homepage_url": "https://github.com/VEERT00X/Github-Dev-Button",
+
+    "icons": {
+        "16": "./images/icon.png",
+        "48": "./images/icon.png",
+        "128": "./images/icon.png"
+    },
+
+
+    "options_ui": {
+        "page": "./html/options.html",
+        "open_in_tab": true
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://github.com/*" , "https://github.dev/*"],
+            "js": ["./javascript/github_com.js", "./javascript/github_dev.js" , "./javascript/options.js"],
+            "css": ["./css/github_com.css"],
+            "run_at": "document_start",
+            "all_frames": false
+
+        }
+    ]
+}
