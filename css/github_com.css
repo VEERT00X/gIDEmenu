@@ -1,5 +1,16 @@
 .sas{
+    padding: 5px 16px !important;
+}
 
-    width : 100%;
+.sas:hover{
+
+    background-color: #347D39 !important;
+}
+
+.open-in-vscode-local{
+
+    border-bottom: 0.09px solid var(--color-fg-default) !important;
+    margin-bottom: 0.2px !important;
+
 
 }
